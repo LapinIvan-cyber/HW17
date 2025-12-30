@@ -1,15 +1,39 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Product product1 = new Product(1, "Laptop", 80000, "Electronics");
+        Product product2 = new Product(2, "Smartphone", 30000, "Electronics");
+        Product product3 = new Product(1, "Laptop", 80000, "Electronics");
+        Product product4 = new Product(3, "Book", 500, "Literature");
+
+
+        System.out.println(product1);
+        System.out.println(product2);
+        System.out.println(product3);
+        System.out.println(product4);
+
+
+        System.out.println("Сравнение product1 и product2: " + product1.equals(product2));
+        System.out.println("Сравнение product1 и product3: " + product1.equals(product3));
+        System.out.println("Сравнение product1 и product4: " + product1.equals(product4));
+
+
+        Product[] basket1 = {product1, product2};
+        Product[] basket2 = {product1, product2};
+        Product[] basket3 = {product1, product4};
+
+        Order order1 = new Order("John Doe", basket1);
+        Order order2 = new Order("Jane Doe", basket2);
+        Order order3 = new Order("John Smith", basket3);
+
+
+        System.out.println(order1);
+        System.out.println(order2);
+        System.out.println(order3);
+
+
+        System.out.println("Сравнение order1 и order2: " + order1.equals(order2));
+        System.out.println("Сравнение order1 и order3: " + order1.equals(order3));
     }
 }
