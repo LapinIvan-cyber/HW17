@@ -37,3 +37,4 @@ public class Main {
         System.out.println("Сравнение order1 и order3: " + order1.equals(order3));
     }
 }
+
